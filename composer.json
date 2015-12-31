@@ -1,0 +1,30 @@
+{
+    "name": "jorgeandrade/finkok",
+    "type": "library",
+    "description": "Este paquete te permite hacer uso del web service de Finkok",
+    "keywords": [
+        "sat",
+        "finkok",
+        "pac",
+        "timbres"
+      ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jorge Andrade",
+            "email": "j.andrade.dev@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "nesbot/carbon": "~1.14"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "~2.0"
+    },
+    "autoload": {
+        "psr-0": {
+          "JorgeAndrade": "src"
+        }
+    }
+}
