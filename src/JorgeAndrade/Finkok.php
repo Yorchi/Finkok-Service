@@ -62,7 +62,6 @@ class Finkok
         $client = new SoapClient("{$this->url}registration.wsdl");
         $params = $this->prepareParams();
         $response = $client->__soapCall('get', array($params));
-
         return $response->getResult->users;
     }
 
@@ -71,8 +70,7 @@ class Finkok
         $client = new SoapClient("{$this->url}registration.wsdl");
         $params = $this->prepareParams(["taxpayer_id" => $rfc]);
         $response = $client->__soapCall('get', array($params));
-
-        return $response->getResult->users;
+        return $response->getResult;
     }
 
     public function timbrar($xml)
@@ -104,7 +102,7 @@ class Finkok
             "key" => $keyContent,
         ]);
 
-        $response = $client->__soapCall($service, array($params));
+        $response = $client->__soapCall('cancel', array($params));
 
         return $response->cancelResult;
     }
